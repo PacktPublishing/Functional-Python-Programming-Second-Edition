@@ -43,15 +43,19 @@ To confirm that all the doctests pass run the following:
 
 $ python3 test_all.py
 
-Tests must be run from the top-level directory using the following:
+To run the tests chapter wise use the following:
 
-$ python3 -m doctest Chapter_3/*.py
+$ python3 -m doctest (folder name)/*.py
+
+Example:
+
+$ python3 -m doctest Chapter03/*.py
 
 There is no response when the tests pass.
 
 If you want details, you can run the following:
 
-$ python3 -m doctest -v Chapter_4/*.py
+$ python3 -m doctest -v Chapter04/*.py
 
 This will produce a lot of detail, but at the end is a count of tests passed.
 
