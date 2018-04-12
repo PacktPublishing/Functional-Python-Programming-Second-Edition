@@ -39,6 +39,22 @@ All of these packages should be installed using the following:
 
 $ pip install pillow beautifulsoup4 PyMonad
 
+To confirm that all the doctests pass run the following:
+
+$ python3 test_all.py
+
+Tests must be run from the top-level directory using the following:
+
+$ python3 -m doctest Chapter_3/*.py
+
+There is no response when the tests pass.
+
+If you want details, you can run the following:
+
+$ python3 -m doctest -v Chapter_4/*.py
+
+This will produce a lot of detail, but at the end is a count of tests passed.
+
 ## Related Products
 * [Functional Python Programming](https://www.packtpub.com/application-development/functional-python-programming?utm_source=github&utm_medium=repository&utm_campaign=9781784396992)
 
