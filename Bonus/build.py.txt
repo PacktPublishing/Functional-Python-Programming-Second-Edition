@@ -1,0 +1,277 @@
+..  #!/usr/bin/env python3.3
+
+Build Script
+-------------------
+
+..  sectnum::
+
+..  contents::
+
+
+Design
+===============
+
+This is a tool somewhat like ant or scons which will track dependencies
+among files and rebuild dependent files when the sources have
+changed.
+
+We have to model two kinds of dependencies.
+
+-   A generic ``*.txt`` depends on on ``*.py``, as well as ``*.html`` on ``*.txt``.
+
+-   A specific ``index.rst`` depends on on ``[*.py]``.
+
+The distinction here is that a generic rule is a template
+that applies to a number of files in a 1-1 relationship.
+
+The specific rule is a slightly more general 1-m target-source relationship.
+
+We'll define a function to build if necessary. This will be a higher-order
+function which requires a builder which can rebuild the target if
+any of the sources have been changed.
+
+We'll define a number of builders for the various tools we need to automate.
+
+Module Overheads
+=================
+
+Module Docstring
+::
+
+  """Build all the code sample files into slightly more readable HTML pages.
+
+  1. Run pylit to build the RST *.txt files from the code in *.py files.
+  2. Create the index.rst page as an additional file.
+  3. Run rst2html.py to build the *.html versions of the *.txt files.
+
+  Requires pylit3 and docutils.
+
+  ::
+
+      python3 -m pip install pylit3 docutils
+  """
+
+Our includes
+::
+
+  from pathlib import Path
+  import os
+  import subprocess
+  import datetime
+  import sys
+  import logging
+  from functools import partial
+
+Some Logging Setup
+==================
+
+A global logger the entire module can use
+
+::
+
+  logger = logging.getLogger("build")
+
+Here's the logging setup done as context management.
+We'll initialize logging and shutdown logging, also.
+
+::
+
+  class Logging_Config:
+      def __enter__(self, filename="logging.config"):
+          logging.basicConfig(stream=sys.stderr, level=logging.INFO)
+      def __exit__(self, *exc):
+          logging.shutdown()
+
+The Core Functions
+===================
+
+The core feature is a ``build_if_needed()`` function. This will
+check the modification times of the named files. This function
+has a simple body:
+
+-  If the target is newer than the source, do nothing.
+
+-  If the target is older than the source, apply the builder function.
+
+In order to determine if we should build, we need to compare
+the modification times of the target and all of the sources.
+This leads to the ``target_ok()`` function to check timstamps.
+
+::
+
+  def target_ok(target_file, *source_list):
+      """Was the target file created after all the source files?
+      If so, this is OK.
+      If there's no target, or the target is out-of-date,
+      it's not OK.
+      """
+      try:
+          mtime_target = datetime.datetime.fromtimestamp(
+              target_file.stat().st_mtime)
+      except FileNotFoundError:
+          logger.debug("File %s not found", target_file)
+          return False
+
+      logger.debug("Compare %s %s >ALL %s",
+                   target_file, mtime_target, source_list)
+
+      # If a source doesn't exist, we have bigger problems.
+      times = (
+          datetime.datetime.fromtimestamp(source_file.stat().st_mtime)
+          for source_file in source_list
+      )
+
+      return all(mtime_target > mtime_source for mtime_source in times)
+
+The ``build_if_needed()`` function requires a builder, a target and
+one or more sources. It will apply the ``target_ok()`` function
+to the target and source files. If necessary, it will apply
+the builder.
+
+::
+
+  def build_if_needed(builder, target_file, *source):
+      """Build the target from the sources using the builder."""
+      logger.debug("Checking %s", target_file)
+      if target_ok(target_file, *source):
+          return f"ok({target_file}, *{source})"
+      builder(target_file, *source)
+      return f"builder({target_file}. *{source})"
+
+We could approach this a different way. We could have
+had the ``build_if_needed()`` return one of two things:
+
+- ``builder(target, \*source)`` partial for evaluation later.
+
+- ``ok(target, \*source)`` partial which is a stub builder that doesn't do anything.
+
+The idea would be that the output from the above would be
+a script that clearly shows what needs to be done.
+
+The Builders
+=============
+
+Each builder is a function which takes the target filename
+and a list of source filenames. It's job is to create the target
+from the sources.
+
+Since we rely on the ``subprocess.run()`` function, each
+builder is properly a composition of the ``run()`` and
+another function that builds the command which is called.
+
+We'll have several ways to implement the functional composition:
+via subclass definition, decorators, or a higher-order function
+that combines the two other functions.
+
+We'll opt for a generic higher-order function and create a partial
+when we bind in the function that builds the arguments.
+
+::
+
+  def subprocess_builder(make_command, target_file, *source_list):
+      command = make_command(target_file, *source_list)
+      logger.debug("Command {0}".format(command))
+      subprocess.run(command)
+
+The PyLit subprocess_builder creates a command to run PyLit.
+
+::
+
+  def command_pylit(output, *input):
+      return ["python3", "-m", "pylit", input[0]]
+
+  pylit = partial(subprocess_builder, command_pylit)
+
+The rst2html subprocess_builder creates a command to run rst2html.
+It includes two common arguments required to make acceptable-looking
+content.
+
+::
+
+  def command_rst2html(output, *input):
+      return ["rst2html.py", "--syntax-highlight=long", "--input-encoding=utf-8", input[0], output]
+
+  rst2html = partial(subprocess_builder, command_rst2html)
+
+A builder to create an index page. This will apply three internal functions
+to create a header, create the body, and create a footer.
+::
+
+  header = lambda : """
+  #############################################
+  Function Python Programming Bonus Code
+  #############################################
+
+  © 2018, Steven F. Lott
+
+  ..  raw:: html
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+      <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+  Some Bonus Material.
+  """
+
+  footer = lambda : "Updated {0}".format(datetime.datetime.now())
+
+  def body( source_list ):
+      return "\n".join(
+          "-   `{0} <{0}>`_".format(source.with_suffix(".html").name)
+          for source in source_list)
+
+  def make_index(target_file, *source_list):
+      with open(target_file, "w") as target:
+          print(header(), file=target)
+          print('\n', file=target)
+          print(body(source_list), file=target)
+          print('\n', file=target)
+          print(footer(), file=target)
+
+Main Script
+===========================
+
+Here's the top-level definition of the dependencies.
+There are three sets of rules.
+
+-  Create ``*.txt`` based on ``*.py`` files for files in ``*.py``.
+
+-  Create ``index.txt`` based on ``*.txt`` files built from names in ``*.py``.
+
+-  Create ``*.html`` based on ``*.txt`` files for files in ``*.txt``
+
+We've stated the rules two ways below. One has a list of
+dependency function values. The other as a **for** loop.
+Both versions seem reasonably clear.
+
+::
+
+  def make_files():
+      files_py = list(Path.cwd().glob("*.py"))
+      txt_builds = [
+          build_if_needed(pylit, f.with_suffix(f.suffix+'.txt'), f)
+          for f in files_py
+      ]
+      for item in txt_builds:
+          logger.info(item)
+
+      index_build = build_if_needed(
+          make_index, Path("index.txt"),
+          *[f.with_suffix(f.suffix+'.txt') for f in files_py]
+      )
+      logger.info(index_build)
+
+      files_txt = Path.cwd().glob("*.txt")
+      for f in files_txt:
+          html_build = build_if_needed(rst2html, f.with_suffix('.html'), f)
+          logger.info(html_build)
+
+The Main script that does all the work.
+We create a logging context. We apply the build-if-needed rules.
+
+::
+
+  if __name__ == "__main__":
+      with Logging_Config():
+          os.chdir(Path("Bonus"))
+          make_files()

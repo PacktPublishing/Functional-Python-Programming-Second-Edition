@@ -1,0 +1,23 @@
+
+#############################################
+Function Python Programming Bonus Code
+#############################################
+
+© 2018, Steven F. Lott
+
+..  raw:: html
+
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+    <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+    <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+Some Bonus Material.
+
+
+
+-   `build.py.html <build.py.html>`_
+-   `case_study.py.html <case_study.py.html>`_
+-   `chi_sq.py.html <chi_sq.py.html>`_
+
+
+Updated 2018-02-24 17:54:39.814749

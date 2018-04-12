@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.13.1: http://docutils.sourceforge.net/" />
+<title></title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<style type="text/css">
+
+/* example stylesheet for Docutils */
+
+/* :Author:    Günter Milde */
+/* :Copyright: © 2012 G. Milde */
+/* :License:   This stylesheet is placed in the public domain. */
+
+/* Syntax highlight rules for HTML documents generated with Docutils */
+/* using the ``--syntax-highlight=long`` option (new in v. 0.9). */
+
+/* This stylesheet implements Pygment's "default" style with less rules than */
+/* pygments-default using class hierarchies.                                 */
+/* Use it as example for "handcrafted" styles with only few rules.      */
+
+.code                              { background: #f8f8f8; }
+.code .comment                     { color: #008800; font-style: italic }
+.code .error                       { border: 1px solid #FF0000 }
+.code .generic.deleted             { color: #A00000 }
+.code .generic.emph                { font-style: italic }
+.code .generic.error               { color: #FF0000 }
+.code .generic.heading             { color: #000080; font-weight: bold }
+.code .generic.inserted            { color: #00A000 }
+.code .generic.output              { color: #808080 }
+.code .generic.prompt              { color: #000080; font-weight: bold }
+.code .generic.strong              { font-weight: bold }
+.code .generic.subheading          { color: #800080; font-weight: bold }
+.code .generic.traceback           { color: #0040D0 }
+.code .keyword                     { color: #AA22FF; font-weight: bold }
+.code .keyword.pseudo              { font-weight: normal }
+.code .literal.number              { color: #666666 }
+.code .literal.string              { color: #BB4444 }
+.code .literal.string.doc          { color: #BB4444; font-style: italic }
+.code .literal.string.escape       { color: #BB6622; font-weight: bold }
+.code .literal.string.interpol     { color: #BB6688; font-weight: bold }
+.code .literal.string.other        { color: #008000 }
+.code .literal.string.regex        { color: #BB6688 }
+.code .literal.string.symbol       { color: #B8860B }
+.code .name.attribute              { color: #BB4444 }
+.code .name.builtin                { color: #AA22FF }
+.code .name.class                  { color: #0000FF }
+.code .name.constant               { color: #880000 }
+.code .name.decorator              { color: #AA22FF }
+.code .name.entity                 { color: #999999; font-weight: bold }
+.code .name.exception              { color: #D2413A; font-weight: bold }
+.code .name.function               { color: #00A000 }
+.code .name.label                  { color: #A0A000 }
+.code .name.namespace              { color: #0000FF; font-weight: bold }
+.code .name.tag                    { color: #008000; font-weight: bold }
+.code .name.variable               { color: #B8860B }
+.code .operator                    { color: #666666 }
+.code .operator.word               { color: #AA22FF; font-weight: bold }
+
+</style>
+<style type="text/css">
+
+/* Page layout tweaks */
+div.document { width: 6in; }
+
+</style>
+<style type="text/css">
+
+/*
+*   math2html: convert LaTeX equations to HTML output.
+*
+*   Copyright (C) 2009,2010 Alex Fernández
+*
+*   Released under the terms of the `2-Clause BSD license'_, in short:
+*   Copying and distribution of this file, with or without modification,
+*   are permitted in any medium without royalty provided the copyright
+*   notice and this notice are preserved.
+*   This file is offered as-is, without any warranty.
+*
+* .. _2-Clause BSD license: http://www.spdx.org/licenses/BSD-2-Clause
+*
+*   Based on eLyXer: convert LyX source files to HTML output.
+*   http://elyxer.nongnu.org/
+*/
+/* --end--
+* CSS file for LaTeX formulas.
+*/
+
+/* Formulas */
+.formula {
+	text-align: center;
+	font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
+	margin: 1.2em 0;
+}
+span.formula {
+	white-space: nowrap;
+}
+div.formula {
+	padding: 0.5ex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Basic features */
+a.eqnumber {
+	display: inline-block;
+	float: right;
+	clear: right;
+	font-weight: bold;
+}
+span.unknown {
+	color: #800000;
+}
+span.ignored, span.arraydef {
+	display: none;
+}
+.formula i {
+	letter-spacing: 0.1ex;
+}
+
+/* Alignment */
+.align-left, .align-l {
+	text-align: left;
+}
+.align-right, .align-r {
+	text-align: right;
+}
+.align-center, .align-c {
+	text-align: center;
+}
+
+/* Structures */
+span.overline, span.bar {
+	text-decoration: overline;
+}
+.fraction, .fullfraction {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+.fraction .fraction {
+	font-size: 80%;
+	line-height: 100%;
+}
+span.numerator {
+	display: block;
+}
+span.denominator {
+	display: block;
+	padding: 0ex;
+	border-top: thin solid;
+}
+sup.numerator, sup.unit {
+	font-size: 70%;
+	vertical-align: 80%;
+}
+sub.denominator, sub.unit {
+	font-size: 70%;
+	vertical-align: -20%;
+}
+span.sqrt {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.1ex;
+}
+sup.root {
+	font-size: 70%;
+	position: relative;
+	left: 1.4ex;
+}
+span.radical {
+	display: inline-block;
+	padding: 0ex;
+	font-size: 150%;
+	vertical-align: top;
+}
+span.root {
+	display: inline-block;
+	border-top: thin solid;
+	padding: 0ex;
+	vertical-align: middle;
+}
+span.symbol {
+	line-height: 125%;
+	font-size: 125%;
+}
+span.bigsymbol {
+	line-height: 150%;
+	font-size: 150%;
+}
+span.largesymbol {
+	font-size: 175%;
+}
+span.hugesymbol {
+	font-size: 200%;
+}
+span.scripts {
+	display: inline-table;
+	vertical-align: middle;
+}
+.script {
+	display: table-row;
+	text-align: left;
+	line-height: 150%;
+}
+span.limits {
+	display: inline-table;
+	vertical-align: middle;
+}
+.limit {
+	display: table-row;
+	line-height: 99%;
+}
+sup.limit, sub.limit {
+	line-height: 100%;
+}
+span.symbolover {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 100%;
+	bottom: 0.5em;
+	width: 0px;
+}
+span.withsymbol {
+	display: inline-block;
+}
+span.symbolunder {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 80%;
+	top: 0.3em;
+	width: 0px;
+}
+
+/* Environments */
+span.array, span.bracketcases, span.binomial, span.environment {
+	display: inline-table;
+	text-align: center;
+	border-collapse: collapse;
+	margin: 0em;
+	vertical-align: middle;
+}
+span.arrayrow, span.binomrow {
+	display: table-row;
+	padding: 0ex;
+	border: 0ex;
+}
+span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
+	display: table-cell;
+	padding: 0ex 0.2ex;
+	line-height: 99%;
+	border: 0ex;
+}
+/*
+* CSS file for LaTeX formulas, extra stuff:
+* binomials, vertical braces, stackrel, fonts and colors.
+*/
+
+/* Inline binomials */
+span.binom {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 80%;
+}
+span.binomstack {
+	display: block;
+	padding: 0em;
+}
+
+/* Over- and underbraces */
+span.overbrace {
+	border-top: 2pt solid;
+}
+span.underbrace {
+	border-bottom: 2pt solid;
+}
+
+/* Stackrel */
+span.stackrel {
+	display: inline-block;
+	text-align: center;
+}
+span.upstackrel {
+	display: block;
+	padding: 0em;
+	font-size: 80%;
+	line-height: 64%;
+	position: relative;
+	top: 0.15em;
+
+}
+span.downstackrel {
+	display: block;
+	vertical-align: bottom;
+	padding: 0em;
+}
+
+/* Fonts */
+span.mathsf, span.textsf {
+	font-style: normal;
+	font-family: sans-serif;
+}
+span.mathrm, span.textrm {
+	font-style: normal;
+	font-family: serif;
+}
+span.text, span.textnormal {
+	font-style: normal;
+}
+span.textipa {
+	color: #008080;
+}
+span.fraktur {
+	font-family: "Lucida Blackletter", eufm10, blackletter;
+}
+span.blackboard {
+	font-family: Blackboard, msbm10, serif;
+}
+span.scriptfont {
+	font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+	font-style: italic;
+}
+
+/* Colors */
+span.colorbox {
+	display: inline-block;
+	padding: 5px;
+}
+span.fbox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 2px;
+}
+span.boxed, span.framebox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 5px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<!-- #!/usr/bin/env python3 -->
+<div class="section" id="calculation">
+<h1><a class="toc-backref" href="#id1">χ² Calculation</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#calculation" id="id1">χ² Calculation</a><ul>
+<li><a class="reference internal" href="#imports" id="id2">Imports</a></li>
+<li><a class="reference internal" href="#factorial" id="id3">Factorial</a></li>
+<li><a class="reference internal" href="#incomplete-gamma" id="id4">Incomplete Gamma</a></li>
+<li><a class="reference internal" href="#gamma-function-1" id="id5">Gamma Function 1</a></li>
+<li><a class="reference internal" href="#gamma-function-2" id="id6">Gamma Function 2</a></li>
+<li><a class="reference internal" href="#gamma-function-3" id="id7">Gamma Function 3</a></li>
+<li><a class="reference internal" href="#gamma-hybrid" id="id8">Gamma Hybrid</a></li>
+<li><a class="reference internal" href="#the-math-gamma-version" id="id9">The math.gamma() Version</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cumulative-distribution-function" id="id10">Cumulative Distribution Function</a></li>
+<li><a class="reference internal" href="#unit-test-cases" id="id11">Unit Test Cases</a></li>
+</ul>
+</div>
+<p>The χ² table in a statistics book enumerates
+values of the χ² Cumulative Distribution Function,
+CDF.</p>
+<div class="formula">
+<i>F</i>(<i>x</i>;<i>k</i>) = <span class="fullfraction"><span class="ignored">(</span><span class="numerator"><i>γ</i><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span>, <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>x</i></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span></span><span class="ignored">)/(</span><span class="denominator">Γ<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span></span><span class="ignored">)</span></span>
+</div>
+<p>See <a class="reference external" href="http://en.wikipedia.org/wiki/Chi-squared_distribution">http://en.wikipedia.org/wiki/Chi-squared_distribution</a></p>
+<p>Given a sum-of-squares value, <span class="formula">χ<sup>2</sup></span>, and degrees of freedom, <span class="formula"><i>f</i></span>.
+We can compute <span class="formula"><i>p</i> = 1 − <i>F</i>(χ<sup>2</sup>;<i>k</i>)</span> which is the probability of the
+<span class="formula">χ<sup>2</sup></span> being random.
+A value of <span class="formula"><i>p</i> ≤ 0.05</span> means the data is unlikely to be random. A value
+of <span class="formula"><i>p</i> &gt; 0.05</span> means that the null hypothesis is probably true:
+the data is random. The higher the <span class="formula"><i>p</i></span> value, the more likely that
+the null hypothesis is true.</p>
+<p>This document presents the computation of the the CDF, <span class="formula"><i>F</i>(<i>x</i>;<i>k</i>)</span>.
+It shows a number of approaches to calculations of the two required values,
+<span class="formula"><i>γ</i>(<i>s</i>, <i>z</i>)</span>, and <span class="formula">Γ(<i>t</i>)</span>. A final choice for a useful
+complete gamma function is chosen based on accuracy for the given use case.</p>
+<p>See <a class="reference external" href="http://en.wikipedia.org/wiki/Incomplete_gamma_function#Regularized_Gamma_functions_and_Poisson_random_variables">http://en.wikipedia.org/wiki/Incomplete_gamma_function#Regularized_Gamma_functions_and_Poisson_random_variables</a></p>
+<p>See <a class="reference external" href="http://en.wikipedia.org/wiki/Stirling%27s_approximation">http://en.wikipedia.org/wiki/Stirling%27s_approximation</a></p>
+<p>See <a class="reference external" href="http://dlmf.nist.gov/5">http://dlmf.nist.gov/5</a> and <a class="reference external" href="http://dlmf.nist.gov/8">http://dlmf.nist.gov/8</a></p>
+<p>See <a class="reference external" href="http://netlib.org/">http://netlib.org/</a> Specifically module 542</p>
+<div class="section" id="imports">
+<h2><a class="toc-backref" href="#id2">Imports</a></h2>
+<p>Modules required by this module.</p>
+<pre class="literal-block">
+import operator
+from functools import reduce, lru_cache
+from fractions import Fraction
+import math
+from typing import Iterator, Tuple, Callable, Iterable, TypeVar
+</pre>
+</div>
+<div class="section" id="factorial">
+<h2><a class="toc-backref" href="#id3">Factorial</a></h2>
+<p>Simple integer factorial is used in a variety of places for computing
+the incomplete and complete gamma function values.</p>
+<p>We'll use this definition of factorial:</p>
+<div class="formula">
+<i>n</i>! = <span class="limits"><sup class="limit"><i>n</i></sup><span class="limit">∏</span><sub class="limit"><i>i</i> = 1</sub></span><i>i</i>
+</div>
+<pre class="literal-block">
+&#64;lru_cache(128)
+def fact(k: int) -&gt; int:
+    &quot;&quot;&quot;Simple factorial.
+
+    &gt;&gt;&gt; fact(1)
+    1
+    &gt;&gt;&gt; fact(2)
+    2
+    &gt;&gt;&gt; fact(3)
+    6
+    &gt;&gt;&gt; fact(4)
+    24
+    &quot;&quot;&quot;
+    if k &lt; 2:
+        return 1
+    return reduce(operator.mul, range(2,k+1))
+</pre>
+<p>The implementation uses <tt class="docutils literal">reduce( operator.mul, ... )</tt> to compute
+the product of a sequence of integer values.
+We've included the <tt class="docutils literal">&#64;lru_cache</tt> because this is used often,
+and the small domain of possible values leads to some benefit
+from the cache.</p>
+<p>We could also use <tt class="docutils literal">math.factorial()</tt>. In order to make use of
+the cache, we would need to do something like this.</p>
+<pre class="literal-block">
+fact = lru_cache(128)(math.factorial)
+</pre>
+<p>This would create a similarly cached factorial function.</p>
+</div>
+<div class="section" id="incomplete-gamma">
+<h2><a class="toc-backref" href="#id4">Incomplete Gamma</a></h2>
+<p>The incomplete (lower) gamma function is this:</p>
+<div class="formula">
+<i>γ</i>(<i>s</i>, <i>z</i>) = <span class="limits"><sup class="limit">∞</sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>k</i> = 0</sub></span><span class="fullfraction"><span class="ignored">(</span><span class="numerator">( − 1)<sup><i>k</i></sup></span><span class="ignored">)/(</span><span class="denominator"><i>k</i>!</span><span class="ignored">)</span></span> <span class="fullfraction"><span class="ignored">(</span><span class="numerator"><i>z</i><sup><i>s</i> + <i>k</i></sup></span><span class="ignored">)/(</span><span class="denominator"><i>s</i> + <i>k</i></span><span class="ignored">)</span></span>
+</div>
+<pre class="literal-block">
+def gamma(s: float, z: float) -&gt; float:
+    &quot;&quot;&quot;Incomplete gamma function.
+
+    &gt;&gt;&gt; import math
+    &gt;&gt;&gt; round(gamma(1, 2),7)
+    0.8646647
+    &gt;&gt;&gt; round(1-math.exp(-2),7)
+    0.8646647
+    &gt;&gt;&gt; round(gamma(1, 3),7)
+    0.9502129
+    &gt;&gt;&gt; round(1-math.exp(-3),7)
+    0.9502129
+    &gt;&gt;&gt; round(gamma(0.5, 2),7)
+    1.6918067
+    &gt;&gt;&gt; round(math.sqrt(math.pi)*math.erf(math.sqrt(2)),7)
+    1.6918067
+    &quot;&quot;&quot;
+
+    def terms(s: float, z: float) -&gt; Iterator[float]:
+        for k in range(1000):
+            term = ((-1)**k/fact(k))*(z**(s+k)/(s+k))
+            yield term
+
+    T_ = TypeVar(&quot;T_&quot;)
+    def take_until(function: Callable[[T_], bool], source: Iterable[T_]) -&gt; Iterator[T_]:
+        for v in source:
+            if function(v): return
+            yield v
+    ε = 1E-8
+    return sum(take_until(lambda t: abs(t) &lt; ε, terms(s, z)))
+</pre>
+<p>The idea here is to compute an infinite sequence of
+values for <span class="formula"><span class="fullfraction"><span class="ignored">(</span><span class="numerator">( − 1)<sup><i>k</i></sup></span><span class="ignored">)/(</span><span class="denominator"><i>k</i>!</span><span class="ignored">)</span></span> <span class="fullfraction"><span class="ignored">(</span><span class="numerator"><i>z</i><sup><i>s</i> + <i>k</i></sup></span><span class="ignored">)/(</span><span class="denominator"><i>s</i> + <i>k</i></span><span class="ignored">)</span></span></span>.
+We enumerate these values while they're greater than <span class="formula"><i>ϵ</i></span>.</p>
+<p>We wrote our own filter function <tt class="docutils literal">take_until(end_condition, function)</tt>.
+This stops the infinite generation of terms when the end condition
+is met.</p>
+<p>One alternative to this is a single tail-recursion, which we can  optimize
+to create a simple <strong>for</strong> loop which emits terms until the values are too small
+to be relevant.</p>
+<pre class="literal-block">
+sigma = 0
+for k in range(1000):
+    term = ((-1)**k/fact(k))*(z**(s+k)/(s+k))
+    if abs(term) &lt; ε: break
+    sigma += term
+return sigma
+</pre>
+<p>We could futher optimize this function to use stateful
+internal variables in the <strong>for</strong> loop. We could slightly
+improve performance with two changes.</p>
+<p>The <tt class="docutils literal"><span class="pre">(-1)**k</span></tt> expression flips the sign on each term.
+We could use, for example, <tt class="docutils literal">1 if k%2 == 0 else <span class="pre">-1</span></tt>,
+which would somewhat less expensive to evaluate.</p>
+<p>Similarly, we don't really need to compute <span class="formula"><i>k</i>!</span> for
+increasing values of <em>k</em>. We could, instead, keep a stateful running
+product calculation that we simply multiply by the next value
+of <em>k</em>.</p>
+</div>
+<div class="section" id="gamma-function-1">
+<h2><a class="toc-backref" href="#id5">Gamma Function 1</a></h2>
+<p>The various complete gamma function approxiations are all slightly
+wrong in various places. We've done three implementations
+in an attempt to locate a &quot;best&quot; function.</p>
+<p>The <tt class="docutils literal">math.gamma()</tt> function is available in Python 3.2.
+We can compare this with our requirements, also.</p>
+<p>The complete gamma function has this definition:</p>
+<div class="formula">
+Γ(<i>t</i>) = <span class="fullfraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>t</i></span><span class="ignored">)</span></span><span class="limits"><sup class="limit">∞</sup><span class="limit">∏</span><sub class="limit"><i>k</i> = 1</sub></span><span class="fullfraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span>1 + <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>k</i></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span><sup><i>t</i></sup></span><span class="ignored">)/(</span><span class="denominator">1 + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i></span><span class="ignored">)/(</span><span class="denominator"><i>k</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>
+</div>
+<pre class="literal-block">
+def Gamma1(t: float) -&gt; float:
+    &quot;&quot;&quot;Gamma Function.
+
+    Gamma(n) == fact(n-1)
+
+    &gt;&gt;&gt; import math
+    &gt;&gt;&gt; round(Gamma1(2),0)
+    1.0
+    &gt;&gt;&gt; round(Gamma1(3),0)
+    2.0
+    &gt;&gt;&gt; round(Gamma1(4),0)
+    6.0
+    &gt;&gt;&gt; round(Gamma1(5),0)
+    24.0
+    &gt;&gt;&gt; round(Gamma1(.5), 7) # Not quite right
+    1.7726754
+    &gt;&gt;&gt; round(math.sqrt(math.pi), 7)
+    1.7724539
+    &quot;&quot;&quot;
+
+    def num_den(t: float) -&gt; Iterator[Tuple[float, float]]:
+        for k in range(1, 1000):
+            yield (1+1/k)**t, (1+t/k)
+
+    T_ = TypeVar(&quot;T_&quot;)
+    def take_until_star(
+            function: Callable[[T_, T_], bool],
+            source: Iterable[Tuple[T_, ...]]
+        ) -&gt; Iterable[Tuple[T_, ...]]:
+        for v in source:
+            if function(*v): return
+            yield v
+
+    prod = lambda x: reduce(operator.mul, x)
+    fst = lambda x: x[0]
+    snd = lambda x: x[1]
+    ε = 1E-8
+
+    terms = tuple(take_until_star(lambda n, d: abs(n/d-1) &lt; ε, num_den(t)))
+
+    return prod(map(fst, terms))/(t*prod(map(snd, terms)))
+</pre>
+<p>This involves two products: the numerator product and the denominator
+product.
+The <tt class="docutils literal">num_den()</tt> function emits an sequence of pairs, <tt class="docutils literal">(n, d)</tt>.</p>
+<p>We could consider this as a sequence of pairs like this:</p>
+<div class="formula">
+<span class="symbol">⟨</span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span>1 + <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>k</i></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span><sup><i>t</i></sup>, 1 + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i></span><span class="ignored">)/(</span><span class="denominator"><i>k</i></span><span class="ignored">)</span></span><span class="symbol">⟩</span><b> for</b>1 ≤ <i>k</i> &lt; ∞
+</div>
+<p>We wrote our own filter function <tt class="docutils literal">take_until_star(end_condition, function)</tt>.
+This stops the infinite generation of tuples when the end condition for the
+tuple is met. We can't use the simple <tt class="docutils literal">take_util()</tt> defined above because
+it makes working with tuples a little bit clunky.
+This version works more elegantly with multi-valued tuples.</p>
+<p>If the <span class="formula"><span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span>1 + <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>k</i></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span><sup><i>t</i></sup></span><span class="ignored">)/(</span><span class="denominator">1 + <span class="fraction"><span class="ignored">(</span><span class="numerator"><i>t</i></span><span class="ignored">)/(</span><span class="denominator"><i>k</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span></span>
+fraction is close to 1, we can stop taking values
+from the infinite iterator. We'll save this sequence in a materialized object,
+<tt class="docutils literal">terms</tt>, because we need to do two reductions on the sequence.</p>
+<p>We then split the two values in the <tt class="docutils literal">terms</tt> sequence
+using <tt class="docutils literal">fst()</tt> and <tt class="docutils literal">snd()</tt> functions.
+This allows us to compute the numerator and denominator products separately.
+We defer doing the final division to the very end to
+preserve as many bits of accuracy as possible.</p>
+<p>Here's an alternative loop construction.</p>
+<pre class="literal-block">
+p_num = p_den = 1
+for n in range(1,1000):
+    num, den = (1+1/n)**t, (1+t/n)
+    if abs(num/den-1) &lt; ε: break
+    p_num *= num
+    p_den *= den
+return p_num/(t*p_den)
+</pre>
+<p>Note that the value of <span class="formula">Γ<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span></span> is very
+close to the defined value of <span class="formula"><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>π</i></span><span class="ignored">)</span></span></span>.
+The integer values, however, require rounding to zero places
+to show the expected values.</p>
+<p>Here's a second version using <tt class="docutils literal">Fraction</tt> objects instead of floats.
+The idea here is to compute the <strong>exact</strong> value to see if -- perhaps --
+the slight discrepancies between actual and expected are due to
+float issues.</p>
+<p>This only works for <tt class="docutils literal">int</tt> and <tt class="docutils literal">Fraction</tt> values. It doesn't work
+for arbitrary <tt class="docutils literal">float</tt> values. That's not a big limitation for this
+application.</p>
+<pre class="literal-block">
+def Gamma1f(t: float) -&gt; float:
+    &quot;&quot;&quot;Gamma Function.
+
+    Gamma(n) == fact(n-1)
+
+    &gt;&gt;&gt; import math
+    &gt;&gt;&gt; round(Gamma1f(2),0)
+    Fraction(1, 1)
+    &gt;&gt;&gt; round(Gamma1f(3),0)
+    Fraction(2, 1)
+    &gt;&gt;&gt; round(Gamma1f(4),0)
+    Fraction(6, 1)
+    &gt;&gt;&gt; round(Gamma1f(5),0)
+    Fraction(24, 1)
+    &gt;&gt;&gt; round(Gamma1f(Fraction(1,2)), 7) # Not quite right
+    1.7726754
+    &gt;&gt;&gt; round(math.sqrt(math.pi), 7)
+    1.7724539
+    &quot;&quot;&quot;
+
+    def num_den(t: Fraction) -&gt; Iterator[Tuple[Fraction, float]]:
+        for k in range(1, 1000):
+            yield (1+Fraction(1, k))**t, (1+t/k)
+
+    T_ = TypeVar(&quot;T_&quot;)
+    def take_until_star(
+            function: Callable[[T_, T_], bool],
+            source: Iterable[Tuple[T_, ...]]
+        ) -&gt; Iterable[Tuple[T_, ...]]:
+        for v in source:
+            if function(*v): return
+            yield v
+
+    prod = lambda x: reduce(operator.mul, x)
+    fst = lambda x: x[0]
+    snd = lambda x: x[1]
+    ε = 1E-8
+
+    t_f = Fraction(t)
+    terms = tuple(take_until_star(lambda n, d: abs(n/d-1) &lt; ε, num_den(t_f)))
+
+    return prod(map(fst, terms))/(t_f*prod(map(snd, terms)))
+</pre>
+<p>We've replaced the division operation in the <tt class="docutils literal">num_den()</tt> function
+with <tt class="docutils literal">Fraction()</tt>. We've also replaced the argument value, <tt class="docutils literal">t</tt>,
+with a <tt class="docutils literal">Fraction</tt>, <tt class="docutils literal">t_f</tt>.</p>
+<p>Two other divisions were left in place because the arguments would be
+<tt class="docutils literal">Fraction</tt> instances:</p>
+<ul class="simple">
+<li>In the <tt class="docutils literal">num_den()</tt> function, we left a division because the argument,
+<tt class="docutils literal">t</tt> will be a <tt class="docutils literal">Fraction</tt>.</li>
+<li>The final division (betweem two <tt class="docutils literal">Fraction</tt> objects) is left in place.</li>
+</ul>
+<p>Interestingly, this produces essentially the same results as the previous
+version. This, too, is not very accurate for values near :math:<tt class="docutils literal"><span class="pre">\frac{1}{2}</span></tt>.</p>
+</div>
+<div class="section" id="gamma-function-2">
+<h2><a class="toc-backref" href="#id6">Gamma Function 2</a></h2>
+<p>It's not clear that we can do better than <tt class="docutils literal">gamma1()</tt>, but it's worth looking
+at other alternatives. The Nemes approximation has the
+advantage of brevity.</p>
+<div class="formula">
+Γ(<i>z</i>) ~ <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>π</i></span><span class="ignored">)/(</span><span class="denominator"><i>z</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator"><i>e</i></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><i>z</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">12<i>z</i> − <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">10<i>z</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span><sup><i>z</i></sup>
+</div>
+<pre class="literal-block">
+def Gamma2(z: float) -&gt; float:
+    &quot;&quot;&quot;Gamma Function. Gergő Nemes version.
+
+    Gamma(n) == fact(n-1)
+
+    &gt;&gt;&gt; import math
+    &gt;&gt;&gt; round(Gamma2(2),1)
+    1.0
+    &gt;&gt;&gt; round(Gamma2(3),1)
+    2.0
+    &gt;&gt;&gt; round(Gamma2(4),1)
+    6.0
+    &gt;&gt;&gt; round(Gamma2(5),1)
+    24.0
+    &gt;&gt;&gt; round(Gamma2(.5), 7) # Not quite right
+    1.7630962
+    &gt;&gt;&gt; round(math.sqrt(math.pi), 7)
+    1.7724539
+    &quot;&quot;&quot;
+    t_1 = math.sqrt(2*math.pi/z)
+    t_2 = (z+(1/(12*z-(1/(10*z)))))/math.e
+    return t_1*t_2**z
+</pre>
+<p>We broke the expression into two parts just to shorten up the
+expression.</p>
+<div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>t</i><sub>1</sub>
+</span>
+<span class="arraycell align-l">
+ = <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>π</i></span><span class="ignored">)/(</span><span class="denominator"><i>z</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>t</i><sub>2</sub>
+</span>
+<span class="arraycell align-l">
+ = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><i>z</i> + <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">12<i>z</i> − <span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">10<i>z</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span></span><span class="ignored">)/(</span><span class="denominator"><i>e</i></span><span class="ignored">)</span></span>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+Γ(<i>z</i>)
+</span>
+<span class="arraycell align-l">
+ = <i>t</i><sub>1</sub> × <i>t</i><sub>2</sub><sup><i>z</i></sup>
+</span>
+
+</span>
+</span>
+</div>
+<p>This is a simple, closed-form evaluation of a function.
+It's remarkably inaccurate for <span class="formula">Γ<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fullfraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span></span>.
+For integer values, however, it's very good.</p>
+</div>
+<div class="section" id="gamma-function-3">
+<h2><a class="toc-backref" href="#id7">Gamma Function 3</a></h2>
+<p>Here's the Sterling version. This sums a sequence of values.</p>
+<div class="formula">
+Γ(<i>z</i>) ~ <i>e</i><sup> − <i>z</i></sup><i>z</i><sup><i>z</i></sup><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>π</i></span><span class="ignored">)/(</span><span class="denominator"><i>z</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="limits"><sup class="limit">∞</sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>k</i> = 0</sub></span><span class="fullfraction"><span class="ignored">(</span><span class="numerator"><i>g</i><sub><i>k</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>z</i><sup><i>k</i></sup></span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span>
+</div>
+<p>Here is the beginning of the sequence of <span class="formula"><i>g</i><sub><i>k</i></sub></span> values.</p>
+<div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>g</i><sub>0</sub>
+</span>
+<span class="arraycell align-l">
+ = 1, 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>g</i><sub>1</sub>
+</span>
+<span class="arraycell align-l">
+ = 1 ⁄ 12, 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>g</i><sub>2</sub>
+</span>
+<span class="arraycell align-l">
+ = 1 ⁄ 288, 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>g</i><sub>3</sub>
+</span>
+<span class="arraycell align-l">
+ =  − 139 ⁄ 51840, 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>g</i><sub>4</sub>
+</span>
+<span class="arraycell align-l">
+ =  − 571 ⁄ 24 88320, 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>g</i><sub>5</sub>
+</span>
+<span class="arraycell align-l">
+ = 1 63879 ⁄ 2090 18880, 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>g</i><sub>6</sub>
+</span>
+<span class="arraycell align-l">
+ = 52 46819 ⁄ 7 52467 96800.
+</span>
+
+</span>
+</span>
+</div>
+<p>There's a defined rule for calculating these obscure-looking values.
+However, we note that the last of these is near <tt class="docutils literal"><span class="pre">10E-5</span></tt>, this is enough
+to give us a usefully accurate answer.</p>
+<p>This is not a convergent series: using more terms used may actually <em>reduce</em>
+the accuracy of the approximation. For the values we're working with,
+we don't seem to need all six terms shown above.</p>
+<pre class="literal-block">
+def Gamma3(z: float) -&gt; float:
+    &quot;&quot;&quot;Gamma Function. Sterling version.
+
+    http://dlmf.nist.gov/5.11#E3
+
+    Gamma(n) == fact(n-1)
+
+    &gt;&gt;&gt; import math
+    &gt;&gt;&gt; round(Gamma3(2),1)
+    1.0
+    &gt;&gt;&gt; round(Gamma3(3),1)
+    2.0
+    &gt;&gt;&gt; round(Gamma3(4),1)
+    6.0
+    &gt;&gt;&gt; round(Gamma3(5),1)
+    24.0
+    &gt;&gt;&gt; round(Gamma3(.5), 7)
+    1.7737381
+    &gt;&gt;&gt; round(math.sqrt(math.pi), 7)
+    1.7724539
+    &quot;&quot;&quot;
+    t_1 = math.exp(-z)*z**z
+    t_2 = math.sqrt(2*math.pi/z)
+    g = [1, 1/12, 1/288, -139/51840, -571/2488320, 163879/209018880, 5246819/75246796800]
+    t_3 = sum(g[k]/(z**k) for k in range(2))
+    return t_1*t_2*t_3
+</pre>
+<p>We've broken this into three parts, to reduce the size of the overall
+expression.</p>
+<div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>t</i><sub>1</sub>
+</span>
+<span class="arraycell align-l">
+ = <i>e</i><sup> − <i>z</i></sup><i>z</i><sup><i>z</i></sup>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>t</i><sub>2</sub>
+</span>
+<span class="arraycell align-l">
+ = <span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><span class="fraction"><span class="ignored">(</span><span class="numerator">2<i>π</i></span><span class="ignored">)/(</span><span class="denominator"><i>z</i></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>t</i><sub>3</sub>
+</span>
+<span class="arraycell align-l">
+ = <span class="limits"><sup class="limit">∞</sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>k</i> = 0</sub></span><span class="fullfraction"><span class="ignored">(</span><span class="numerator"><i>g</i><sub><i>k</i></sub></span><span class="ignored">)/(</span><span class="denominator"><i>z</i><sup><i>k</i></sup></span><span class="ignored">)</span></span>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+Γ(<i>z</i>)
+</span>
+<span class="arraycell align-l">
+ = <i>t</i><sub>1</sub> × <i>t</i><sub>2</sub> × <i>t</i><sub>3</sub>
+</span>
+
+</span>
+</span>
+</div>
+<p>This is acceptable for <span class="formula">Γ<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fullfraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span></span>.
+Note that we're only using the first two terms. Compare these results with the
+<tt class="docutils literal">Gamma2()</tt> function, shown above. The number of terms required seems
+to vary with the range of the vaue of <span class="formula"><i>z</i></span>.</p>
+</div>
+<div class="section" id="gamma-hybrid">
+<h2><a class="toc-backref" href="#id8">Gamma Hybrid</a></h2>
+<p>Most of the approximations aren't very accurate
+for the <span class="formula">Γ<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>k</i></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span></span> values.
+We can use this exact closed-form expression instead:</p>
+<div class="formula">
+Γ<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span> + <i>n</i><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">(2<i>n</i>)!</span><span class="ignored">)/(</span><span class="denominator">4<sup><i>n</i></sup><i>n</i>!</span><span class="ignored">)</span></span><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><i>π</i></span><span class="ignored">)</span></span>
+</div>
+<p>This provides precise values for the special cases we're using.</p>
+<p>Here's a hybrid <tt class="docutils literal">Gamma()</tt> function. For certain values, we'll use the exact
+<span class="formula">Γ<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="fraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span> + <i>n</i><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span></span> value. For other values,
+we'll use the <tt class="docutils literal">Gamma2()</tt> approximation, above.</p>
+<pre class="literal-block">
+def Gamma_Half(k: float) -&gt; float:
+    &quot;&quot;&quot;Gamma(k) with special case for k = n+1/2; k-1/2=n.
+
+    &gt;&gt;&gt; import math
+    &gt;&gt;&gt; round(Gamma_Half(2),1)
+    1.0
+    &gt;&gt;&gt; round(Gamma_Half(3),1)
+    2.0
+    &gt;&gt;&gt; round(Gamma_Half(4),1)
+    6.0
+    &gt;&gt;&gt; round(Gamma_Half(5),1)
+    24.0
+
+    &gt;&gt;&gt; round(Gamma_Half(.5), 7)
+    1.7724539
+    &gt;&gt;&gt; round(math.sqrt(math.pi), 7)
+    1.7724539
+    &gt;&gt;&gt; round(Gamma_Half(1.5), 7)
+    0.8862269
+    &gt;&gt;&gt; round(math.sqrt(math.pi)/2, 7)
+    0.8862269
+    &quot;&quot;&quot;
+    ε = 1E-6
+    if abs(k-int(k)-.5) &lt; ε:
+        n = int(k-.5)
+        return fact(2*n)/(4**n*fact(n))*math.sqrt(math.pi)
+    else:
+        return float(Gamma2(k))
+</pre>
+<p>If the value is an <span class="formula"><i>n</i> + <span class="fullfraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span>±<i>ϵ</i></span>, we'll use the special
+close-form expression. If the value is not close to <span class="formula"><i>n</i> + <span class="fullfraction"><span class="ignored">(</span><span class="numerator">1</span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span></span>,
+we'll use a more general approximation.</p>
+</div>
+<div class="section" id="the-math-gamma-version">
+<h2><a class="toc-backref" href="#id9">The math.gamma() Version</a></h2>
+<p>Here's a test case for the <tt class="docutils literal">math.gamma()</tt> function.</p>
+<pre class="literal-block">
+test_math_gamma = &quot;&quot;&quot;
+&gt;&gt;&gt; import math
+&gt;&gt;&gt; round(math.gamma(2),2)
+1.0
+&gt;&gt;&gt; round(math.gamma(3),2)
+2.0
+&gt;&gt;&gt; round(math.gamma(4),2)
+6.0
+&gt;&gt;&gt; round(math.gamma(5),2)
+24.0
+
+&gt;&gt;&gt; round(math.gamma(.5), 7)
+1.7724539
+&gt;&gt;&gt; round(math.sqrt(math.pi), 7)
+1.7724539
+&gt;&gt;&gt; round(math.gamma(1.5), 7)
+0.8862269
+&gt;&gt;&gt; round(math.sqrt(math.pi)/2, 7)
+0.8862269
+&quot;&quot;&quot;
+</pre>
+<p>This looks good, also. For the given test cases, it's as accurate
+as our hybrid shown above.</p>
+</div>
+</div>
+<div class="section" id="cumulative-distribution-function">
+<h1><a class="toc-backref" href="#id10">Cumulative Distribution Function</a></h1>
+<p>The real calculation of the CDF from a <span class="formula">χ<sup>2</sup></span> value, <tt class="docutils literal">x</tt>, and
+the degrees of freedom, <tt class="docutils literal">k</tt>.</p>
+<pre class="literal-block">
+def cdf(x: float, k: int) -&gt; float:
+    &quot;&quot;&quot;χ² cumulative distribution function.
+
+    :param x: χ² value -- generally sum (obs[i]-exp[i])**2/exp[i]
+        for parallel sequences of observed and expected values.
+    :param k: degrees of freedom &gt;= 1; generally len(data)-1
+
+    From http://en.wikipedia.org/wiki/Chi-squared_distribution
+
+    &gt;&gt;&gt; round(cdf(0.004, 1), 2)
+    0.95
+    &gt;&gt;&gt; round(cdf(10.83, 1), 3)
+    0.001
+    &gt;&gt;&gt; round(cdf(3.94, 10), 2)
+    0.95
+    &gt;&gt;&gt; round(cdf(29.59, 10), 3)
+    0.001
+    &gt;&gt;&gt; expected=[0.95, 0.90, 0.80, 0.70, 0.50, 0.30, 0.20, 0.10, 0.05, 0.01, 0.001]
+    &gt;&gt;&gt; chi2= [0.004, 0.02, 0.06, 0.15, 0.46, 1.07, 1.64, 2.71, 3.84, 6.64, 10.83]
+    &gt;&gt;&gt; act= [round(x,3) for x in map(cdf, chi2, [1]*len(chi2))]
+    &gt;&gt;&gt; act
+    [0.95, 0.888, 0.806, 0.699, 0.498, 0.301, 0.2, 0.1, 0.05, 0.01, 0.001]
+
+    From http://www.itl.nist.gov/div898/handbook/prc/section4/prc45.htm
+
+    &gt;&gt;&gt; round(cdf(19.18, 6), 5)
+    0.00387
+    &gt;&gt;&gt; round(cdf(12.5916, 6), 2)
+    0.05
+
+    From http://www.itl.nist.gov/div898/handbook/prc/section4/prc46.htm
+    &gt;&gt;&gt; round(cdf(12.131, 4), 5)
+    0.01639
+    &gt;&gt;&gt; round(cdf(9.488, 4), 2)
+    0.05
+
+    &quot;&quot;&quot;
+    return 1-gamma(k/2, x/2)/Gamma_Half(k/2)
+</pre>
+<p>The calcuation is 1 minus the ratio the partial
+gamma to the full gamma.</p>
+</div>
+<div class="section" id="unit-test-cases">
+<h1><a class="toc-backref" href="#id11">Unit Test Cases</a></h1>
+<p>We'll use the doctest comments in each function defined above.
+Additionally, we'll use some strings with doctest test cases.</p>
+<pre class="literal-block">
+__test__ = {
+    &quot;test_math_gamma&quot;: test_math_gamma,
+}
+
+def test(*args, **kw):
+    import doctest
+    doctest.testmod(*args, **kw)
+
+if __name__ == &quot;__main__&quot;:
+    test()
+</pre>
+</div>
+</div>
+</body>
+</html>
